@@ -1,4 +1,5 @@
 'use strict';
+const date = require('date-and-time')
 
 const express = require('express');
 
@@ -9,7 +10,12 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('<h1 style="color:green;">Java Home App - version-10!!</h1> \n');
+  var now = new Date();
+  var nowFormatted = date.format(now, "YYYY/MM/DD HH:mm:ss");
+  
+  var responseText = `<h1 style="color:green;">Java Home App - version-10!!</h1> <br> started @: ${nowFormatted}`;
+  
+  res.send(responseText);
 });
 
 app.listen(PORT, HOST);
