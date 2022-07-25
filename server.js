@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   var now = new Date();
   var nowFormatted = date.format(now, "YYYY/MM/DD HH:mm:ss");
   
-  var responseText = `<h1 style="color:green;">Java Home App - version-10!!</h1> <br> started @: ${nowFormatted}`;
+  var responseText = `<h1 style="color:red;">Java Home App - version-11!!</h1> <br> started @: ${nowFormatted}`;
   
   res.send(responseText);
 });
